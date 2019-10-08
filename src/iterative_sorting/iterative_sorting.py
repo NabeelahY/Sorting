@@ -12,10 +12,11 @@ def selection_sort(arr):
                 smallest_index = j
 
         # TO-DO: swap
-        temp = arr[smallest_index]
-        arr[smallest_index] = arr[cur_index]
-        arr[cur_index] = temp
-
+        # temp = arr[smallest_index]
+        # arr[smallest_index] = arr[cur_index]
+        # arr[cur_index] = temp
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[
+            cur_index]
     return arr
 
 
@@ -31,7 +32,7 @@ def bubble_sort(arr):
                 arr[i] = arr[i + 1]
                 arr[i + 1] = temp
                 swaps += 1
-                           
+
         if not swaps:
             sorted = True
 
@@ -40,5 +41,7 @@ def bubble_sort(arr):
 
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
+    max = max(arr)
+    count = []
 
     return arr
